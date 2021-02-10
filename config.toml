@@ -1,0 +1,4 @@
+baseURL = "https://3dasd.com/"
+languageCode = "en-us"
+title = "3Dasd"
+theme = "book"
