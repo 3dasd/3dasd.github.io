@@ -11,5 +11,5 @@ git clone --recurse-submodules git@github.com:3dasd/3dasd.github.io.git
 Launch local site with:
 
 ```sh
-
+hugo server
 ```
