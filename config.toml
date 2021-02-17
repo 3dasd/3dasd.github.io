@@ -3,6 +3,9 @@ languageCode = "en-us"
 theme = "book"
 title = "3dasd"
 
+[permalinks]
+posts = "/:year/:month/:day/:title/"
+
 # The rest are configurations for the 'book' theme:
 
 # (Optional) Set Google Analytics if you use it to track your website.
