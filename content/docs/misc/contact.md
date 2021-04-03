@@ -8,4 +8,4 @@ weight: 1
 # bookComments: true
 ---
 
-Daniel Voros -- daniel.voros@gmail.com
+Daniel Voros -- dvoros@3dasd.com
