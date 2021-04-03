@@ -1,0 +1,3 @@
+{{ $image := resources.Get (.Get "path") }}
+{{ $image := $image.Resize "500x" }}
+<img src="{{ $image.Permalink }}" alt="">
