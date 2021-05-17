@@ -1,5 +1,5 @@
 ---
-title: "Getting Started"
+title: "Software components"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -7,3 +7,4 @@ weight: 1
 # bookCollapseSection: false
 # bookComments: true
 ---
+
