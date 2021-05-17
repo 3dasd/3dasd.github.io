@@ -18,7 +18,7 @@ please check back later! (;
 
 This site is here to help building a room-scale 3D scanner like this:
 
-{{< container-image path="images/scanner-photo-2021-04-01.jpg" >}}
+{{< container-image path="images/scanner-photo-2021-04-01.jpg" width=500px >}}
 
 The goal is to provide everyone with the instructions to build a cheap
 room-scale 3D scanner.

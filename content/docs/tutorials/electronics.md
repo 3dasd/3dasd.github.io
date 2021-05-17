@@ -40,5 +40,5 @@ Start at the [JCLPCB order page](https://cart.jlcpcb.com/quote#EZ). Click the
 "Add gerber file" and upload the Gerber file you've downloaded from
 (here)[https://github.com/3dasd/lidar-pcb/raw/master/scanner/v4/Gerber_v4-2021-05-17.zip].
 
-{{< container-image path="images/jlcpcb-order-1.png" >}}
+{{< container-image path="images/jlcpcb-order-1.png" width=500px >}}
 
