@@ -1,3 +1,5 @@
 {{ $image := resources.Get (.Get "path") }}
 {{ $x := .Get "width" }}
-<img src="{{ $image.Permalink }}" style="max-width: {{$x}};" alt="" data-zoomable="">
+<div style="text-align: center;">
+    <img src="{{ $image.Permalink }}" style="max-width: {{$x}};" alt="" data-zoomable="">
+</div>

@@ -6,7 +6,7 @@ headless: true
 - **Build instructions**
 - [Getting started]({{< relref "/docs/tutorials/getting-started" >}})
 - [Electronics]({{< relref "/docs/tutorials/electronics" >}})
-- [3D-printing]({{< relref "/docs/tutorials/3d-printing" >}})
+- [Mechanics]({{< relref "/docs/tutorials/mechanics" >}})
 - [Assembly]({{< relref "/docs/tutorials/assembly" >}})
 - [Software]({{< relref "/docs/tutorials/software" >}})
 
