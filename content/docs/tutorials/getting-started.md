@@ -39,8 +39,9 @@ Order the following:
 
 > See [Mechanics]({{< relref "/docs/tutorials/mechanics" >}}) for details.
 
-All the mechanical parts are 3D-printed. It takes around 20 hours to print
-everything with an average printer.
+Almost all of the mechanical parts are 3D-printed. It takes around 20 hours to
+print everything. You also need a couple nuts and bolts and also a few ball
+bearings and magnets.
 
 ## Assembly
 
