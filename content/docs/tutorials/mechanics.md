@@ -16,8 +16,8 @@ a few metal pieces that hold everything together.
 
 ## The metal parts
 
-You need a couple nuts and bolts and also some ball bearings. Here's the
-shopping list:
+You need a couple nuts and bolts and also some ball bearings and magnets. Here's
+the shopping list:
 
 | Item              | Quantity |
 |-------------------|------|
@@ -110,6 +110,16 @@ moved around
 - all the other nuts and heads can be a little more loose
 - the magnet should be a tight fit, but it's also okay if you glue it into place
 
+### Customization
+
+If you can't get the right nuts/bolts, you can try customizing the 3D models for
+the chassis pieces to work with your hardware. You can download the OpenSCAD
+source for the models
+[from here](https://github.com/3dasd/lidar-scad/blob/master/scanner.scad)
+or view it on
+[Thingiverse here](https://www.thingiverse.com/thing:4870012). Hit the "Open in
+Customizer" button to set your sizes.
+
 ### Printing the pieces
 
 If you're satisfied with the test-fit results, you can start printing the
@@ -127,22 +137,22 @@ individual pieces:
 
 | Piece               | Quantity | Notes |
 |---------------------|----------|-------|
-| `purple`            | 1        | Needs support for the nut sockets. |
 | `pink`              | 1        | No supports. Print slower to get accurate gears. |
-| `green`             | 1        | Needs support for multiple sockets. |
+| `purple`            | 1        | Needs support for the nut sockets. |
 | `orange`            | 1        | No supports. |
+| `green`             | 1        | Needs support for multiple sockets. |
 | `blue`              | 1        | Needs support for the entire inner circle. Consider printing on a raft. Won't be visible from the outside, don't worry if it's ugly! |
-| `idle_leg`          | 1        | Maybe you can get away without support. |
-| `driver_leg`        | 1        | Needs support for the sockets. |
-| `mount`             | 1        | Needs support for the sockets. |
 | `x_driver_gear`     | 1        | No supports. Print slower to get accurate gears. |
 | `y_driver_gear`     | 1        | No supports. Print slower to get accurate gears. |
 | `y_gear`            | 1        | No supports. Print slower to get accurate gears. |
-| `y_bearing_plug`    | 1        | Might require some extra build plate adhesion (raft or brim). |
+| `mount`             | 1        | Needs support for the sockets. |
+| `idle_leg`          | 1        | Maybe you can get away without support. |
+| `driver_leg`        | 1        | Needs support for the sockets. |
 | `y_gear_plug`       | 1        | Might require some extra build plate adhesion (raft or brim). |
+| `y_bearing_plug`    | 1        | Might require some extra build plate adhesion (raft or brim). |
 | `pcb_bottom_spacer` | **3**    | **Print three!** Might require some extra build plate adhesion (raft or brim). |
 
-### Adding the magnets
+## Adding the magnets
 
 The `mount` and `orange` pieces have tiny sockets for the magnets. Push the
 magnets into those holes and glue them into place if necessary. Make sure that
