@@ -2,9 +2,14 @@
 headless: true
 ---
 
+- **Intro**
+- [Usage]({{< relref "/docs/tutorials/usage" >}})
+- [Under the hood]({{< relref "/docs/tutorials/under-the-hood" >}})
+
+&nbsp;
 
 - **Build instructions**
-- [Getting started]({{< relref "/docs/tutorials/getting-started" >}})
+- [Overview]({{< relref "/docs/tutorials/build-overview" >}})
 - [Electronics]({{< relref "/docs/tutorials/electronics" >}})
 - [Mechanics]({{< relref "/docs/tutorials/mechanics" >}})
 - [Assembly]({{< relref "/docs/tutorials/assembly" >}})

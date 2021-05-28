@@ -5,44 +5,47 @@ type: docs
 
 # 3dasd
 
-Welcome to `3dasd.com`, home for a fully open-source DIY room-scale 3D scanner.
+Welcome to `3dasd.com`, home for a fully open-source DIY room-scale 3D scanner!
 
 {{< hint info >}}
 **Work in progress!**  
 This site and this whole project is in a very early stage. Everything is subject
-to change and hopefully improvement. If you're looking for a mature product,
-please check back later! (;
+to change and hopefully improvement. (;
 {{< /hint >}}
 
 ## What's this all about?
 
-This site is here to help building a room-scale 3D scanner like this:
+This site is here to help you build a room-scale 3D scanner like this:
 
-{{< container-image path="images/scanner-photo-2021-04-01.jpg" width=500px >}}
-
-The goal is to provide everyone with the instructions to build a cheap
-room-scale 3D scanner.
+{{< container-image path="images/scanner-photo-2021-04-01.jpg" width=80% >}}
 
 ## Who is this for?
 
-The goal is to make this as accessible as possible! However, at this point you
+The goal is to make this as **accessible as possible**! However, at this point you
 need to have access to a 3D printer, do some very basic soldering and assemble
 a few cables (JST connectors).
+
+Everything you see is open-source and free (as in free beer **and** free
+speech). I'm more than happy to hear your ideas and incorporate your feedback.
+Shoot me an
+[email]({{< relref "/docs/misc/contact" >}}), open a
+[GitHub](https://github.com/3dasd)
+issue or **pull-request**! (;
 
 ## Is it any good?
 
 [Yes](https://about.gitlab.com/is-it-any-good/)! Well, okay, it depends. (:
 
-This is not a production-grade scanner, it's way too slow and just not accurate
-enough for most real-world applications. It could be a great entry into the
-world of 3D scanning though.
+This is not a production-grade scanner, it's way too slow, loud and just not
+accurate enough for most real-world applications. It could be a great entry into
+the world of 3D scanning though.
 
-Check out the [examples page](https://examples.3dasd.com) for measurements taken
+Check out the [examples page](https://examples.3dasd.com) for scans taken
 with the scanner.
 
 ## Acknowledgements
 
-This project started off as the combination of two Youtube videos:
+This project started off as the combination of these Youtube videos:
 
 - ["Making a Lidar scanner in the home shop with a lathe, a pair of STM32s, and a Garmin Lidar Lite"](https://www.youtube.com/watch?v=KGN82vLjguI)
 by **David Cambridge**. This was the original inspiration for 3dasd.
