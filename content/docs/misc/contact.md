@@ -8,4 +8,8 @@ weight: 1
 # bookComments: true
 ---
 
+# Contact
+
+Join `3dasd` on Discord: https://discord.gg/CUW3Epjx9A
+
 Daniel Voros -- dvoros@3dasd.com
