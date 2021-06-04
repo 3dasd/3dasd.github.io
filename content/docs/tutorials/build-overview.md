@@ -15,7 +15,7 @@ links below for the detailed instructions on every topic.
 
 ## Electronics
 
-You need to order two PCBs and a couple electronic components first. Then solder
+You need to get two PCBs and a couple electronic components first. Then solder
 things together (pretty basic through-hole soldering only!). Once everything's
 set up, you need to do a little calibration and assemble a few cables.
 
@@ -42,6 +42,10 @@ Once you have all the parts ready it's time to assemble the scanner.
 ## Software
 
 With everything wired up you will need to install the software components on the
-scanner.
+scanner. Initialize an SD card for the Raspberry Pi with a base image, fill in
+your custom information (e.g. WiFi network) and then connect via SSH to flash
+the Arduino with the driver program.
+
+{{< container-image path="images/software.png" width=90% >}}
 
 > See [Software]({{< relref "/docs/tutorials/software" >}}) for all the details.

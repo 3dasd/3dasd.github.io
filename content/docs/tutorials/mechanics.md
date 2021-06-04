@@ -156,7 +156,7 @@ individual pieces:
 
 The `mount` and `orange` pieces have tiny sockets for the magnets. Push the
 magnets into those holes and glue them into place if necessary. Make sure that
-the **north pole of the magnet is facing outside** (towards the future Hall
+the **north pole of the magnet is facing outwards** (towards the future Hall
 sensor)!
 [Here's an article](https://www.stanfordmagnets.com/how-to-determine-north-and-south-pole-of-magnet.html)
 that helps you determine the polarization of your magnets.

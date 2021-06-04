@@ -27,6 +27,16 @@ You need to get the following:
 
 ### Getting the PCBs
 
+{{< hint info >}}
+**Check with me first!**
+
+Since you can only order 5+ PCBs from JLCPCB, I happen to have some extras! I'd
+be more than happy to send them your way so you don't have to order more PCBs
+than you need.
+[Get in touch!]({{< relref "/docs/misc/contact" >}})
+{{< /hint >}}
+
+
 You need to get two PCBs: the **scanner** and the **scanner-power-supply**. Both
 designs are available in the [lidar-pcb](https://github.com/3dasd/lidar-pcb)
 Github repository. You could order PCBs with the Gerber files stored there from
@@ -207,6 +217,8 @@ Cut the original connector from the LIDAR cable leaving around 18cm of the wires
 
 {{< /columns >}}
 
-My cables look like this, but I'm sure you can do better! (;
+Here's how my cables turned out, but I'm sure you can do better! (;
 
 {{< container-image path="images/cables-photo.jpg" width=50% >}}
+
+{{< container-image path="images/cables-photo2.jpg" width=50% >}}

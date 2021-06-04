@@ -17,7 +17,7 @@ to change and hopefully improvement. (;
 
 This site is here to help you build a room-scale 3D scanner like this:
 
-{{< container-image path="images/scanner-photo-2021-04-01.jpg" width=80% >}}
+{{< container-image path="images/scanner-photo-2021-06-03.jpg" width=80% >}}
 
 ## Who is this for?
 

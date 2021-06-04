@@ -10,6 +10,8 @@ weight: 1
 
 # Under the hood
 
+## Software components 
+
 {{< container-image path="images/architecture.png" width=90% >}}
 
 - [**lidar-driver**](https://github.com/3dasd/lidar-driver)
