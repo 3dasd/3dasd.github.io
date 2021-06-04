@@ -1,6 +1,105 @@
-<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><meta name=theme-color content="#FFFFFF"><meta property="og:title" content="Software components"><meta property="og:description" content><meta property="og:type" content="article"><meta property="og:url" content="https://3dasd.com/docs/tutorials/software/"><title>Software components | 3dasd</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.8ac6e71f198033799bb4fe24413491992ae375cdfcbaa8927d90a443dbea9e6a.css integrity="sha256-isbnHxmAM3mbtP4kQTSRmSrjdc38uqiSfZCkQ9vqnmo="></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<!doctype html><html lang=en dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Software #  This page walks you through installing the required software on the scanner. You&rsquo;ll need to install a base image on an SD card for the Raspberry Pi, install some utilities and then upload the Arduino&rsquo;s program through the Pi.
+The Pi will be running a PlatformIO Remote Agent that lets you upload lidar-driver on the Arduino from your desktop.
+ Prerequisites #  PlatformIO on desktop #  You need to have PlatformIO installed on your desktop to be able to upload the program on the Arduino."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content="Software components"><meta property="og:description" content="Software #  This page walks you through installing the required software on the scanner. You&rsquo;ll need to install a base image on an SD card for the Raspberry Pi, install some utilities and then upload the Arduino&rsquo;s program through the Pi.
+The Pi will be running a PlatformIO Remote Agent that lets you upload lidar-driver on the Arduino from your desktop.
+ Prerequisites #  PlatformIO on desktop #  You need to have PlatformIO installed on your desktop to be able to upload the program on the Arduino."><meta property="og:type" content="article"><meta property="og:url" content="https://3dasd.com/docs/tutorials/software/"><title>Software components | 3dasd</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.8ac6e71f198033799bb4fe24413491992ae375cdfcbaa8927d90a443dbea9e6a.css integrity="sha256-isbnHxmAM3mbtP4kQTSRmSrjdc38uqiSfZCkQ9vqnmo="></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/><img src=/logo.svg alt=Logo><span>3dasd</span></a></h2><ul><li><strong>Intro</strong></li><li><a href=/docs/tutorials/usage/>Usage</a></li><li><a href=/docs/tutorials/under-the-hood/>Under the hood</a></li></ul><p> </p><ul><li><strong>Build instructions</strong></li><li><a href=/docs/tutorials/build-overview/>Overview</a></li><li><a href=/docs/tutorials/electronics/>Electronics</a></li><li><a href=/docs/tutorials/mechanics/>Mechanics</a></li><li><a href=/docs/tutorials/assembly/>Assembly</a></li><li><a href=/docs/tutorials/software/ class=active>Software</a></li></ul><p> </p><ul><li><strong>Details</strong></li><li><a href=/docs/details/asdp-file/>.asdp file</a></li></ul><p> </p><ul><li><strong>Misc</strong></li><li><a href=https://examples.3dasd.com>Examples</a></li><li><a href=/docs/misc/contact/>Contact</a></li></ul><p> </p><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Software components</strong>
-<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class=markdown></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/3dasd/3dasd.github.io/edit/master/content/content/docs/tutorials/software.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt=Edit>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#prerequisites>Prerequisites</a><ul><li><a href=#platformio-on-desktop>PlatformIO on desktop</a></li><li><a href=#ssh-client>SSH client</a></li></ul></li><li><a href=#raspberry-pi-base-image>Raspberry Pi base image</a></li><li><a href=#customizing-your-pi>Customizing your Pi</a><ul><li><a href=#wifi-setup>WiFi setup</a></li><li><a href=#add-your-ssh-public-key>Add your SSH public key</a></li><li><a href=#add-your-platformio-token>Add your PlatformIO token</a></li></ul></li><li><a href=#first-boot>First boot</a><ul><li><a href=#ip-address>IP address</a></li><li><a href=#ssh-access>SSH access</a></li><li><a href=#enable-platformio-remote-agent>Enable PlatformIO Remote Agent</a></li><li><a href=#enable-serial-port>Enable serial port</a></li></ul></li><li><a href=#upload-lidar-driver-to-arduino>Upload lidar-driver to Arduino</a></li><li><a href=#run-lidar-client>Run lidar-client</a></li></ul></nav></aside></header><article class=markdown><h1 id=software>Software
+<a class=anchor href=#software>#</a></h1><p>This page walks you through installing the required software on the scanner.
+You&rsquo;ll need to install a base image on an SD card for the Raspberry Pi, install
+some utilities and then upload the Arduino&rsquo;s program through the Pi.</p><p>The Pi will be running a
+<a href=https://docs.platformio.org/en/latest/plus/pio-remote.html>PlatformIO Remote Agent</a>
+that lets you upload
+<code>lidar-driver</code> on the Arduino from your desktop.</p><div style=text-align:center><img src=https://3dasd.com/images/software.png style=max-width:90% alt data-zoomable></div><h2 id=prerequisites>Prerequisites
+<a class=anchor href=#prerequisites>#</a></h2><h3 id=platformio-on-desktop>PlatformIO on desktop
+<a class=anchor href=#platformio-on-desktop>#</a></h3><p>You need to have
+<a href=https://platformio.org>PlatformIO</a>
+installed on your desktop to be able to upload the program on the Arduino. The rest
+of this guide assumes you have the
+<a href=https://platformio.org/install/cli>CLI (PlatformIO Core)</a>
+installed, but you should be able do everything using the IDE as well.</p><h3 id=ssh-client>SSH client
+<a class=anchor href=#ssh-client>#</a></h3><p>Most Linux distributions and Mac OS have SSH clients built-in. On Windows, you
+could use
+<a href=https://www.putty.org/>PuTTY</a>. You&rsquo;ll need the SSH client to connect to the
+Raspberry Pi once it has booted up.</p><h2 id=raspberry-pi-base-image>Raspberry Pi base image
+<a class=anchor href=#raspberry-pi-base-image>#</a></h2><p>You need to install a base Raspberry Pi OS image on a micro-SD card first. I
+recommend using the 3dasd base image from
+<a href=https://github.com/3dasd/pidock/releases/download/v0.1.0/3dasd-raspbian-v0.1.0.zip>here</a>.</p><blockquote class="book-hint info"><p><strong>What&rsquo;s in the 3dasd base image?</strong><br>At the moment the 3dasd base image only extends the official Raspbian base
+image with an installation of the <em>PlatformIO Remote Agent</em> which is required
+for uploading the software running on the Arduino.</p><p>You could also start from scratch or build on top of your own image. Check out
+<a href=https://github.com/3dasd/pidock>this repo</a>
+that documents (and automates) the creation of the 3dasd base image.</p></blockquote><p>See the instructions
+<a href=https://www.raspberrypi.org/documentation/installation/installing-images/>here</a>
+under <em>Writing the image</em> for installing the image on an
+SD card.</p><h2 id=customizing-your-pi>Customizing your Pi
+<a class=anchor href=#customizing-your-pi>#</a></h2><p>Once you have the base image on the SD card, it&rsquo;s time to make it your own by
+customizing it a bit.</p><h3 id=wifi-setup>WiFi setup
+<a class=anchor href=#wifi-setup>#</a></h3><p>You need to add your WiFi network to <code>/etc/wpa_supplicant/wpa_supplicant.conf</code>
+on the root partition to let the Pi connect to your network. See instructions
+<a href=https://www.raspberrypi.org/documentation/configuration/wireless/headless.md>here</a>.</p><h3 id=add-your-ssh-public-key>Add your SSH public key
+<a class=anchor href=#add-your-ssh-public-key>#</a></h3><p>Password login is disabled by default so you need to add your SSH public key
+to the Pi&rsquo;s SD card first.</p><p>If you don&rsquo;t have an SSH keypair, you&rsquo;ll need to generate one first. On
+Linux/Mac OS you need to invoke <code>ssh-keygen</code> from a terminal. If you&rsquo;re running
+PuTTY on Windows,
+<a href=https://system.cs.kuleuven.be/cs/system/security/ssh/setupkeys/putty-with-key.html>this guide</a>
+should help.</p><p>Open the <code>/home/pi/.ssh/authorized_keys</code> file from the SD card&rsquo;s root partition
+and paste your public key (from <code>~/.ssh/id_rsa.pub</code> on Linux/Mac OS; see the
+guide above for Windows instructions).</p><h3 id=add-your-platformio-token>Add your PlatformIO token
+<a class=anchor href=#add-your-platformio-token>#</a></h3><p>To let PlatformIO connect from your desktop to the Pi, you need to add your
+PlatformIO account token to <code>/etc/systemd/system/pio-remote.service</code> on the root
+partition.</p><p>Run the following on your desktop to obtain your token:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># 1) Register (skip if you already have a PlatformIO account)</span>
+pio account register
+<span style=color:#75715e># 2) Login</span>
+pio account login
+<span style=color:#75715e># 3) Show the token</span>
+pio account token
+</code></pre></div><p>Copy the token from the last command&rsquo;s output. Edit <code>/etc/systemd/system/pio-remote.service</code>
+to replace <code>YOUR-TOKEN</code> with the actual token.</p><h2 id=first-boot>First boot
+<a class=anchor href=#first-boot>#</a></h2><p>Once you&rsquo;re done with the customization steps from above, you can unmount/eject
+the SD card, insert it into the Raspberry Pi and power up the scanner.</p><h3 id=ip-address>IP address
+<a class=anchor href=#ip-address>#</a></h3><p>Once the Pi boots up it should automatically connect to the WiFi network that
+you&rsquo;ve specified above. To be able to access it from other devices (e.g. your
+desktop computer) on the same network, you need to figure out its IP address
+first. See
+<a href=https://www.raspberrypi.org/documentation/remote-access/ip-address.md>this guide</a>
+for instructions.</p><h3 id=ssh-access>SSH access
+<a class=anchor href=#ssh-access>#</a></h3><p>Once you have the IP address, you can connect with PuTTY on Windows or with
+<code>ssh</code> on Linux/Mac OS:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>ssh pi@YOUR-PI-IP
+</code></pre></div><h3 id=enable-platformio-remote-agent>Enable PlatformIO Remote Agent
+<a class=anchor href=#enable-platformio-remote-agent>#</a></h3><p>Once connected via SSH, enable and start the PlatformIO <code>systemd</code> service with
+the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>sudo systemctl enable pio-remote <span style=color:#f92672>&amp;&amp;</span> sudo systemctl start pio-remote
+</code></pre></div><p>You can verify that the service has started with:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>systemctl status pio-remote
+</code></pre></div><p>You should see a green <strong>active (running)</strong> status and the logs should end with
+<code>[info] Successfully authorized</code>.</p><h3 id=enable-serial-port>Enable serial port
+<a class=anchor href=#enable-serial-port>#</a></h3><p>To enable the serial port where the Pi will reach the Arduino,
+run</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>sudo raspi-config
+</code></pre></div><p>Choose <code>Interface Options</code> and then <code>Serial Port</code>. Say <strong><code>No</code> to the login shell</strong>
+question and <strong><code>Yes</code> to enabling the serial port hardware</strong>. Exit with the <code>Finish</code>
+button and let it reboot.</p><div style=text-align:center><img src=https://3dasd.com/images/raspi-config-serial.png style=max-width:60% alt data-zoomable></div><h2 id=upload-lidar-driver-to-arduino>Upload lidar-driver to Arduino
+<a class=anchor href=#upload-lidar-driver-to-arduino>#</a></h2><p>Clone or download the lidar-driver repo on your desktop and run the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># PlatformIO login (skip if you&#39;re already logged in)</span>
+pio account login
+<span style=color:#75715e># List remote agent (your scanner&#39;s Raspberry Pi should show up)</span>
+pio remote agent list
+<span style=color:#75715e># Upload lidar-driver</span>
+cd lidar-driver/
+pio remote run --target upload
+</code></pre></div><p>Once the upload completes you should see the <strong>green LED blinking</strong> every two
+seconds on the scanner indicating that it&rsquo;s running and ready.</p><h2 id=run-lidar-client>Run lidar-client
+<a class=anchor href=#run-lidar-client>#</a></h2><p>Download <code>lidar-client</code> on the raspberry with the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>wget https://github.com/3dasd/lidar-client/releases/download/v0.1.2/lidar-client_0.1.2_linux_armv5.tar.gz -O lidar-client.tar.gz
+tar xzf lidar-client.tar.gz lidar-client
+rm lidar-client.tar.gz
+</code></pre></div><p>You can launch the client with</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>./lidar-client
+</code></pre></div><p>Time to try some commands to see if everything works! Every command is a single
+character optionally followed immediately by a number. Try the following to move
+the scanner around:</p><pre><code>x100
+x-100
+y50
+y-50
+</code></pre><p>The most important command to remember is <code>s</code> that <strong>immediately stops</strong> whatever
+the scanner is doing.</p><p>To exit the client, hit <code>Ctrl+C</code>. For more information on how to use the scanner
+see <a href=/docs/tutorials/usage/>Usage</a>.</p><blockquote class="book-hint info"><p><strong>Congratulations!</strong></p><p>At this point you should have a working 3D scanner! I&rsquo;m sure
+you&rsquo;ve experienced some hiccups along the way, please share your feedback!
+<a href=/docs/misc/contact/>Get in touch!</a></p></blockquote></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/3dasd/3dasd.github.io/edit/master/content/content/docs/tutorials/software.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt=Edit>
 <span>Edit this page</span></a></div></div><script>(function(){function select(element){const selection=window.getSelection();const range=document.createRange();range.selectNodeContents(element);selection.removeAllRanges();selection.addRange(range);}
-document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script><script src=//unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js></script><script>mediumZoom('[data-zoomable]')</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents></nav></div></aside></main></body></html>
+document.querySelectorAll("pre code").forEach(code=>{code.addEventListener("click",function(event){select(code.parentElement);if(navigator.clipboard){navigator.clipboard.writeText(code.parentElement.textContent);}});});})();</script><script src=//unpkg.com/medium-zoom@1.0.6/dist/medium-zoom.min.js></script><script>mediumZoom('[data-zoomable]')</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#prerequisites>Prerequisites</a><ul><li><a href=#platformio-on-desktop>PlatformIO on desktop</a></li><li><a href=#ssh-client>SSH client</a></li></ul></li><li><a href=#raspberry-pi-base-image>Raspberry Pi base image</a></li><li><a href=#customizing-your-pi>Customizing your Pi</a><ul><li><a href=#wifi-setup>WiFi setup</a></li><li><a href=#add-your-ssh-public-key>Add your SSH public key</a></li><li><a href=#add-your-platformio-token>Add your PlatformIO token</a></li></ul></li><li><a href=#first-boot>First boot</a><ul><li><a href=#ip-address>IP address</a></li><li><a href=#ssh-access>SSH access</a></li><li><a href=#enable-platformio-remote-agent>Enable PlatformIO Remote Agent</a></li><li><a href=#enable-serial-port>Enable serial port</a></li></ul></li><li><a href=#upload-lidar-driver-to-arduino>Upload lidar-driver to Arduino</a></li><li><a href=#run-lidar-client>Run lidar-client</a></li></ul></nav></div></aside></main></body></html>
