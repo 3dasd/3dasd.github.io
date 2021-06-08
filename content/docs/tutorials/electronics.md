@@ -110,7 +110,7 @@ You can order the following from LCSC:
 - `3x JST PH-6 male`: one for the LIDAR connector and two for the motors
 - `2x JST PH-4 male`: for the motors
 - `2x JST PH-3 male`: for the Hall sensors
-- `28+x JST PH crimping terminals`: for the connectors above (get more, they're
+- `28x JST PH crimping terminals`: for the connectors above (get more, they're
 easy to screw up!)
 - `1x screw terminal`: for the `scanner-power-supply` PCB
 - `1x 5.5-2.0MM DC plug`: for the `scanner-power-supply` PCB
@@ -150,19 +150,25 @@ Here's what you need:
 | [Arduino Nano](https://store.arduino.cc/arduino-nano) | Or anything compatible. |
 | [Slip-ring](https://www.adafruit.com/product/736) | The chassis is designed to fit **SRC022A-6 or SRC022A-12** but can be modified relatively easily to fit something similar. If you can't get these, make sure yours have at least **2 wires** and is rated for at least **2 amps and 12 volts**. |
 | [12V 2A DC power supply](https://www.amazon.com/UL-Listed-Supply-Adapter-Wireless-Monitor/dp/B071NCHTM8) | With **5.5*2.5mm** barrel DC plug. |
-| 2 meters of AWG 24 wire | Should fit into the [JST PH](https://www.jst-mfg.com/product/pdf/eng/ePH.pdf) connector's crimping terminal. Preferably in four colors (red, black, blue, green). |
+| ~2 meters of AWG 24 wire | Should fit into the [JST PH](https://www.jst-mfg.com/product/pdf/eng/ePH.pdf) connector's crimping terminal. Preferably in four colors (red, black, blue, green). |
 | Crimping tool for JST PH connectors | You might be able to assemble the cables without this ([video](https://www.youtube.com/watch?v=UD1h8ug3wQQ)) but it makes your life a lot easier if you can borrow one. |
 | 40 pin male 2-row header pin for the Raspberry | If you were able to get a Raspberry without the pins. ([solderless connectors maybe?](https://www.adafruit.com/product/3662))|
-| ball bearings |  |
-| nuts & bolts |  |
 
 ## Soldering
 
-TODO
+### scanner PCB
 
-- header pin to Raspberry
-- RPi+Arduino+A4988 onto main PCB
-- power-supply PCB
+You need to solder the pin header on the Raspberry Pi and solder it onto the
+main PCB along with the Arduino Nano and the two A4988 boards.
+
+{{< container-image path="images/main-pcb-parts.jpg" width=80% >}}
+
+### scanner-power-supply PCB
+
+Solder the DC plug and the screw terminal on the PCB. Screw terminal's input
+should be facing away from the plug to be accessible.
+
+{{< container-image path="images/power-pcb-parts.jpg" width=80% >}}
 
 ## Calibrating
 
@@ -181,6 +187,7 @@ power supply into the on-board plug, then follow
 
 ## Cables
 
+### JST connectors
 You need to craft five cables using the JST PH connectors. The LIDAR cable comes
 with the LIDAR, you only need to replace the original connector on the non-LIDAR
 side with a 6-pin JST PH connector.
@@ -196,21 +203,21 @@ Refer to the image below for the connections:
 {{< container-image path="images/cables-diagram.png" width=90% >}}
 
 {{< columns >}}
-### Hall sensors
+#### Hall sensors
 
 Solder three cables to the three legs of the sensor. Use insulation sleeves or
 tape to make sure the three legs won't touch.
 
 <--->
 
-### Motors
+#### Motors
 
 Make sure you connect to the right places on the 6-pin side. 2nd and 5th places
 are supposed to be empty.
 
 <--->
 
-### LIDAR
+#### LIDAR
 
 Cut the original connector from the LIDAR cable leaving around 18cm of the wires.
 **Don't remove the connector that goes into the LIDAR!**
@@ -222,3 +229,13 @@ Here's how my cables turned out, but I'm sure you can do better! (;
 {{< container-image path="images/cables-photo.jpg" width=50% >}}
 
 {{< container-image path="images/cables-photo2.jpg" width=50% >}}
+
+### Slip-ring
+
+Only two cables are required, you can remove the rest. Make sure you **keep the same
+colors** on both ends! You could also join two cables to make sure they can
+drive enough current (max. 2A). Cut the cables to around 8cm length. You can
+also cut them once they're in place during the
+[assembly]({{< relref "/docs/tutorials/assembly" >}}).
+
+{{< container-image path="images/slip-ring.jpg" width=50% >}}

@@ -165,7 +165,9 @@ button and let it reboot.
 
 ## Upload lidar-driver to Arduino
 
-Clone or download the lidar-driver repo on your desktop and run the following:
+Clone or download the
+[lidar-driver repo](https://github.com/3dasd/lidar-driver/releases/tag/v0.1.0)
+on your desktop and run the following:
 
 ```sh
 # PlatformIO login (skip if you're already logged in)

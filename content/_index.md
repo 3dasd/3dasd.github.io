@@ -28,7 +28,7 @@ a few cables (JST connectors).
 Everything you see is open-source and free (as in free beer **and** free
 speech). I'm more than happy to hear your ideas and incorporate your feedback.
 Shoot me an
-[email]({{< relref "/docs/misc/contact" >}}), open a
+[email or find me on Discord]({{< relref "/docs/misc/contact" >}}), open a
 [GitHub](https://github.com/3dasd)
 issue or **pull-request**! (;
 
