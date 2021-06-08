@@ -77,7 +77,9 @@ run</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-m
 </code></pre></div><p>Choose <code>Interface Options</code> and then <code>Serial Port</code>. Say <strong><code>No</code> to the login shell</strong>
 question and <strong><code>Yes</code> to enabling the serial port hardware</strong>. Exit with the <code>Finish</code>
 button and let it reboot.</p><div style=text-align:center><img src=https://3dasd.com/images/raspi-config-serial.png style=max-width:60% alt data-zoomable></div><h2 id=upload-lidar-driver-to-arduino>Upload lidar-driver to Arduino
-<a class=anchor href=#upload-lidar-driver-to-arduino>#</a></h2><p>Clone or download the lidar-driver repo on your desktop and run the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># PlatformIO login (skip if you&#39;re already logged in)</span>
+<a class=anchor href=#upload-lidar-driver-to-arduino>#</a></h2><p>Clone or download the
+<a href=https://github.com/3dasd/lidar-driver/releases/tag/v0.1.0>lidar-driver repo</a>
+on your desktop and run the following:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># PlatformIO login (skip if you&#39;re already logged in)</span>
 pio account login
 <span style=color:#75715e># List remote agent (your scanner&#39;s Raspberry Pi should show up)</span>
 pio remote agent list
