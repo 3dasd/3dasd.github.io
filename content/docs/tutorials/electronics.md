@@ -239,3 +239,9 @@ also cut them once they're in place during the
 [assembly]({{< relref "/docs/tutorials/assembly" >}}).
 
 {{< container-image path="images/slip-ring.jpg" width=50% >}}
+
+## Conclusion
+
+Congratulations, you're done with the electronics! You're past the worst part,
+the cables assembly. (: Get your 3d-printer ready and continue with
+[mechanics]({{< relref "/docs/tutorials/mechanics" >}}).

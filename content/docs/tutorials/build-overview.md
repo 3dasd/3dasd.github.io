@@ -35,7 +35,10 @@ ball bearings and magnets.
 
 ## Assembly
 
-Once you have all the parts ready it's time to assemble the scanner.
+Once you have all the parts ready it's time to assemble the scanner. It's a bit
+complicated but there's a video tutorial that covers everything.
+
+{{< container-image path="images/cables-attached.jpg" width=50% >}}
 
 > See [Assembly]({{< relref "/docs/tutorials/assembly" >}}) for all the details.
 

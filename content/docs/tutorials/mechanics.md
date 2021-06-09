@@ -162,3 +162,10 @@ sensor)!
 that helps you determine the polarization of your magnets.
 
 {{< container-image path="images/magnet-and-hall-sensor.png" width=50% >}}
+
+## Conclusion
+
+Congratulations, you're done with the mechanical parts! You have everything to
+assemble the scanner! Head over to the
+[assembly]({{< relref "/docs/tutorials/assembly" >}})
+page.
