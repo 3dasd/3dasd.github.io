@@ -10,7 +10,7 @@ weight: 1
 
 # Electronics
 
-This page walks you through obtaining and putting together all the electronics
+This page walks you through obtaining and putting together all the electronic
 components required for building a 3dasd scanner.
 
 ## Ordering everything
@@ -18,7 +18,7 @@ components required for building a 3dasd scanner.
 You need to get the following:
 - two PCBs (main and power supply) with a bunch of electronic components
 - two sets of NEMA 17 stepper motors and A4988 drivers
-- Garmin LIDAR-Lite v3
+- a Garmin LIDAR-Lite v3
 - a Raspberry Pi Zero W
 - an Arduino Nano
 - a slip-ring
@@ -43,10 +43,10 @@ Github repository. You could order PCBs with the Gerber files stored there from
 any manufacturer.
 
 The following describes the process of ordering from JLCPCB. It's probably the
-easiest option as the designs include parts that are availble in their webshop
+easiest option as the designs include parts that are availble in their inventory
 so you can order assembled PCBs.
 
-Start at the [JCLPCB order page](https://cart.jlcpcb.com/quote#EZ). Click on
+Start at the [JLCPCB order page](https://cart.jlcpcb.com/quote#EZ). Click on
 `Add gerber file` and upload the Gerber file you've downloaded from
 [here](https://github.com/3dasd/lidar-pcb/raw/master/scanner/v4/Gerber_v4-2021-05-17.zip).
 The default options should work, you can leave them as is:
@@ -99,13 +99,14 @@ time you should upload
 [this Gerber file](https://github.com/3dasd/lidar-pcb/raw/master/scanner-power-supply/v3/Gerber_v3-2021-04-01_2021-04-02.zip).
 
 The power plug PCB is too small for automated assembly. You won't be able to
-enable `SMT assembly` and will need to separately order parts for this PCB.
+enable `SMT assembly` and will need to separately order parts for this PCB (see
+below).
 
 Once you're done with the second PCB, finish your order with `Secure Checkout`.
 
 ### Connectors and Hall sensor
 
-You can order the following from LCSC:
+You need to order the following from LCSC (or your local store):
 
 - `3x JST PH-6 male`: one for the LIDAR connector and two for the motors
 - `2x JST PH-4 male`: for the motors
@@ -135,7 +136,7 @@ finish your order.
 ### Rest of the modules
 
 Unfortunately the rest of the electronics are not available from a single
-webshop, so you'll need to find the best place you can get them. Depending on
+online store, so you'll need to find the best place you can get them. Depending on
 your location you can try ordering from Amazon, AliExpress or even better,
 your favorite local electronics shop.
 
@@ -159,7 +160,8 @@ Here's what you need:
 ### scanner PCB
 
 You need to solder the pin header on the Raspberry Pi and solder it onto the
-main PCB along with the Arduino Nano and the two A4988 boards.
+main PCB along with the Arduino Nano and the two A4988 boards. Pay attention
+to the correct orientation, refer to the image below.
 
 {{< container-image path="images/main-pcb-parts.jpg" width=80% >}}
 
@@ -234,7 +236,7 @@ Here's how my cables turned out, but I'm sure you can do better! (;
 
 Only two cables are required, you can remove the rest. Make sure you **keep the same
 colors** on both ends! You could also join two cables to make sure they can
-drive enough current (max. 2A). Cut the cables to around 8cm length. You can
+carry enough current (2A max). Cut the cables to around 8cm length. You can
 also cut them once they're in place during the
 [assembly]({{< relref "/docs/tutorials/assembly" >}}).
 
@@ -243,5 +245,5 @@ also cut them once they're in place during the
 ## Conclusion
 
 Congratulations, you're done with the electronics! You're past the worst part,
-the cables assembly. (: Get your 3d-printer ready and continue with
+the cables assembly. (: Get your 3D printer ready and continue with the
 [mechanics]({{< relref "/docs/tutorials/mechanics" >}}).

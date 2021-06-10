@@ -45,9 +45,9 @@ complicated but there's a video tutorial that covers everything.
 ## Software
 
 With everything wired up you will need to install the software components on the
-scanner. Initialize an SD card for the Raspberry Pi with a base image, fill in
+scanner. Initialize an SD card for the on-board Raspberry Pi with a base image, fill in
 your custom information (e.g. WiFi network) and then connect via SSH to flash
-the Arduino with the driver program.
+the on-board Arduino with the driver program.
 
 {{< container-image path="images/software.png" width=90% >}}
 
