@@ -21,7 +21,7 @@ This site is here to help you build a room-scale 3D scanner like this:
 
 ## Who is this for?
 
-The goal is to make this as **accessible as possible**! However, at this point you
+The goal is to make this **as accessible as possible**! However, at this point you
 need to have access to a 3D printer, do some very basic soldering and assemble
 a few cables (JST connectors).
 
