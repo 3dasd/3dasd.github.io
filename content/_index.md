@@ -30,7 +30,7 @@ speech). I'm more than happy to hear your ideas and incorporate your feedback.
 Shoot me an
 [email or find me on Discord]({{< relref "/docs/misc/contact" >}}), open a
 [GitHub](https://github.com/3dasd)
-issue or **pull-request**! (;
+issue or **pull-request**! Get involved! (;
 
 ## Is it any good?
 
@@ -42,6 +42,19 @@ the world of 3D scanning though.
 
 Check out the [examples page](https://examples.3dasd.com) for scans taken
 with the scanner.
+
+## Is it expensive?
+
+It tries not to be. (:
+
+Prices will depend on a lot of factors. Do you 3d-print your own pieces? Where
+do you order the electronic components from? Do you trust the cheapest modules?
+Do you
+[get in contact]({{< relref "/docs/misc/contact" >}})
+with me so I can send you a leftover PCB? (;
+
+A very-very rough estimate would be around **350 USD** with the bulk of it being
+the LIDAR sensor.
 
 ## Acknowledgements
 
