@@ -8,9 +8,10 @@ type: docs
 Welcome to `3dasd.com`, home for a fully open-source DIY room-scale 3D scanner!
 
 {{< hint info >}}
-**Work in progress!**  
-This site and this whole project is in a very early stage. Everything is subject
-to change and hopefully improvement. (;
+**No longer maintained**  
+I'm not maintaining this site and this whole project anymore. If you happen to
+have any questions, you can still reach me via the
+[contacts]({{< relref "/docs/misc/contact" >}}) though.
 {{< /hint >}}
 
 ## What's this all about?
